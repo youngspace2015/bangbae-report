@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>방배점 월간 리포트 (4.7~6.7)</title>
+<style>
+  :root{
+    --ink:#1c2230; --sub:#6b7280; --line:#e7e9ee; --bg:#f5f6f9;
+    --brand:#ff6b35; --brand-soft:#fff1ea; --navy:#222b45; --ok:#1f9d6b; --ok-soft:#e6f6ee;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:840px;margin:0 auto;padding:0 18px 70px}
+  header{background:linear-gradient(135deg,#2b3556,#222b45);color:#fff;border-radius:0 0 26px 26px;padding:44px 34px 36px;box-shadow:0 12px 30px rgba(34,43,69,.18)}
+  .badge-top{display:inline-block;background:rgba(255,107,53,.22);color:#ffb799;font-weight:700;font-size:13px;letter-spacing:.5px;padding:6px 14px;border-radius:999px;margin-bottom:16px}
+  header h1{font-size:29px;font-weight:800;letter-spacing:-.5px;margin-bottom:8px}
+  header .period{font-size:15px;color:#c5cbe0}
+  .summary{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}
+  .card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:16px 12px;text-align:center}
+  .card .num{font-size:28px;font-weight:800;color:#fff;line-height:1}
+  .card .num small{font-size:14px;color:#aeb6d0;font-weight:600}
+  .card .lbl{font-size:13px;color:#c5cbe0;margin-top:6px}
+  .card .svc{display:inline-block;margin-top:8px;font-size:11px;font-weight:700;background:rgba(255,107,53,.28);color:#ffc8b1;padding:3px 9px;border-radius:999px}
+
+  section{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px 26px;margin-top:16px;box-shadow:0 4px 14px rgba(30,35,60,.04)}
+  .sec-head{display:flex;align-items:center;gap:10px;margin-bottom:8px;flex-wrap:wrap}
+  .sec-head .dot{width:9px;height:9px;border-radius:50%;background:var(--brand)}
+  .sec-head h2{font-size:19px;font-weight:800;letter-spacing:-.3px}
+  .sec-head .count{margin-left:auto;font-size:12.5px;font-weight:700;color:#fff;background:var(--brand);padding:5px 13px;border-radius:999px}
+  .note{color:#3a4254;font-size:14px;margin:2px 0 14px}
+  .note b{color:var(--brand)}
+  .pill-ok{display:inline-block;font-size:12px;font-weight:700;color:var(--ok);background:var(--ok-soft);padding:3px 10px;border-radius:999px;margin-left:4px}
+
+  ul.links{list-style:none;display:flex;flex-direction:column;gap:7px;margin-top:4px}
+  ul.links li{display:flex;align-items:center;gap:10px;background:#fafbfc;border:1px solid var(--line);border-radius:10px;padding:9px 14px;font-size:13.5px}
+  ul.links li::before{content:"▸";color:var(--brand);font-weight:800}
+  ul.links li a{color:#2b62d9;text-decoration:none;word-break:break-all}
+  ul.links li a:hover{text-decoration:underline}
+
+  .imgrow{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+  .imgrow.one{grid-template-columns:1fr;max-width:460px}
+  figure{margin:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fafbfc}
+  figure img{width:100%;display:block}
+  figcaption{font-size:12.5px;color:var(--sub);padding:8px 12px;border-top:1px solid var(--line);background:#fff}
+
+  .plan{display:flex;flex-direction:column;gap:10px}
+  .plan .row{display:flex;gap:12px;align-items:flex-start;font-size:14.5px}
+  .plan .row .k{flex:0 0 88px;font-weight:700;color:var(--navy)}
+  .plan .row .v{color:#374151}
+  .kw-result{display:inline-flex;align-items:center;gap:6px;font-weight:800;color:var(--ok);font-size:15px;margin-right:14px}
+  footer{text-align:center;color:var(--sub);font-size:13px;margin-top:30px}
+  @media(max-width:640px){.summary{grid-template-columns:repeat(2,1fr)}.imgrow{grid-template-columns:1fr}}
+  @media print{
+    body{background:#fff}
+    .wrap{padding-bottom:0}
+    section{break-inside:avoid;box-shadow:none}
+    header{break-inside:avoid;border-radius:0}
+    figure{break-inside:avoid}
+    ul.links li{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+<header>
+  <span class="badge-top">YOUNG PLACE · 방배점</span>
+  <h1>방배점 월간 운영 리포트</h1>
+  <div class="period">2026. 4. 7 ~ 6. 7 &nbsp;|&nbsp; 네이버 플레이스 · 블로그 · 광고 통합</div>
+  <div class="summary">
+    <div class="card"><div class="num">7<small>건</small></div><div class="lbl">예약리뷰</div><div class="svc">계약 6 + 서비스 1</div></div>
+    <div class="card"><div class="num">13<small>건</small></div><div class="lbl">블로그리뷰</div><div class="svc">계약 8 + 서비스 5</div></div>
+    <div class="card"><div class="num">3<small>건</small></div><div class="lbl">클립</div><div class="svc">계약 2 + 서비스 1</div></div>
+    <div class="card"><div class="num">3<small>건</small></div><div class="lbl">소식</div><div class="svc">동영상·남성전용</div></div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section>
+    <div class="sec-head"><span class="dot"></span><h2>예약리뷰</h2><span class="count">계약 6건 + 서비스 1건 = 총 7건 완료</span></div>
+    <p class="note">계약 분량 6건을 모두 완료하고, <b>서비스로 1건을 더 진행</b>해 총 7건을 업로드했습니다. (동영상·사진·키워드 조합)</p>
+    <div class="imgrow one">
+      <figure><img src="images/image.png" alt="예약리뷰"><figcaption>동영상·사진·리뷰 업로드</figcaption></figure>
+    </div>
+    <ul class="links">
+      <li><a href="https://m.place.naver.com/my/review/6a1676f716d1fb3c0fb86164" target="_blank">m.place.naver.com/my/review/6a1676f716d1fb3c0fb86164</a></li>
+      <li><a href="https://m.place.naver.com/my/review/6a1013eadc0b87716fcfff65" target="_blank">m.place.naver.com/my/review/6a1013eadc0b87716fcfff65</a></li>
+      <li><a href="https://m.place.naver.com/my/review/6a0d407a6b5f3e386070ce91" target="_blank">m.place.naver.com/my/review/6a0d407a6b5f3e386070ce91</a></li>
+      <li><a href="https://m.place.naver.com/my/review/69fce2d298f720ebabead7d1" target="_blank">m.place.naver.com/my/review/69fce2d298f720ebabead7d1</a></li>
+      <li><a href="https://m.place.naver.com/my/review/69f84752a799d2bdfa71e306" target="_blank">m.place.naver.com/my/review/69f84752a799d2bdfa71e306</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="dot"></span><h2>블로그리뷰</h2><span class="count">계약 8건 + 서비스 5건 = 총 13건 완료</span></div>
+    <p class="note">키워드·방문의도에 맞춰 <b>AI가 읽을 수 있는 구조</b>로 리뷰를 설계하고, <b>실제 리뷰어 아이디</b>로 진행했습니다. 계약 8건을 완료하고 <b>서비스로 5건을 더 진행</b>해 총 13건을 업로드했으며, <b>방배역원룸텔·방배역고시원 1페이지 상위노출</b>을 견인했습니다. (방배점 전용 블로그 ysbangbae 중심 + 체험단 분산)</p>
+    <ul class="links">
+      <li><a href="https://blog.naver.com/youngplace3033/224256505831" target="_blank">blog.naver.com/youngplace3033/224256505831</a></li>
+      <li><a href="https://blog.naver.com/ysbangbae/224266567897" target="_blank">blog.naver.com/ysbangbae/224266567897</a></li>
+      <li><a href="https://blog.naver.com/ysbangbae/224272165641" target="_blank">blog.naver.com/ysbangbae/224272165641</a></li>
+      <li><a href="https://blog.naver.com/julli9900/224268963218" target="_blank">blog.naver.com/julli9900/224268963218</a></li>
+      <li><a href="https://blog.naver.com/ysbangbae/224272150576" target="_blank">blog.naver.com/ysbangbae/224272150576</a></li>
+      <li><a href="https://blog.naver.com/emma200909/224256469318" target="_blank">blog.naver.com/emma200909/224256469318</a></li>
+      <li><a href="https://blog.naver.com/ysbangbae/224296967299" target="_blank">blog.naver.com/ysbangbae/224296967299</a></li>
+      <li><a href="https://blog.naver.com/jy0303-_-/224297763230" target="_blank">blog.naver.com/jy0303-_-/224297763230</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="dot"></span><h2>플레이스 — 남성전용으로 수정</h2><span class="count">5월 27일 반영</span></div>
+    <p class="note">업종 포지셔닝을 <b>'남성전용'</b>으로 명확화하여 타깃 정합도를 강화했습니다.</p>
+    <div class="imgrow one">
+      <figure><img src="images/image_3.png" alt="남성전용 반영"><figcaption>플레이스 ‘남성전용’ 반영 (5/27)</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="dot"></span><h2>클립</h2><span class="count">계약 2건 + 서비스 1건 = 총 3건 완료</span></div>
+    <p class="note">계약 2건을 완료하고, <b>서비스로 1건을 더 제작·업로드</b>했습니다.</p>
+    <div class="imgrow one">
+      <figure><img src="images/image_5.png" alt="클립"><figcaption>숏폼 클립 업로드</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="dot"></span><h2>소식</h2><span class="count">3건 발행</span></div>
+    <p class="note">동영상 제작 · 남성전용 안내 등 플레이스 소식 3건을 발행했습니다.</p>
+    <div class="imgrow one">
+      <figure><img src="images/image_6.png" alt="소식"><figcaption>플레이스 소식 발행</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="dot"></span><h2>블로그 · 플레이스 연결</h2><span class="count">블로그 개설 — 서비스 제공</span></div>
+    <p class="note"><b>방배점 전용 블로그를 신규 개설</b>해 플레이스와 연결했습니다. <span class="pill-ok">서비스 제공</span></p>
+    <ul class="links">
+      <li><a href="https://blog.naver.com/ysbangbae/224296967299" target="_blank">blog.naver.com/ysbangbae/224296967299</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="dot"></span><h2>네이버 광고 셋팅</h2><span class="count">서비스 제공</span></div>
+    <p class="note">플레이스 광고 · 파워링크 세팅을 완료했습니다. <span class="pill-ok">서비스 제공</span></p>
+    <div class="imgrow one">
+      <figure><img src="images/image_8.png" alt="광고 셋팅"><figcaption>플레이스·파워링크 광고 셋팅</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="dot"></span><h2>키워드 순위 — 1페이지 노출</h2><span class="count">방배역원룸텔 · 방배역고시원</span></div>
+    <p class="note"><span class="kw-result">✔ 방배역원룸텔 1페이지</span><span class="kw-result">✔ 방배역고시원 1페이지</span></p>
+    <div class="imgrow">
+      <figure><img src="images/image_9.png" alt="방배역원룸텔 순위"><figcaption>‘방배역원룸텔’ 검색 1페이지 노출</figcaption></figure>
+      <figure><img src="images/image_10.png" alt="방배역고시원 순위"><figcaption>‘방배역고시원’ 검색 1페이지 노출</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="dot" style="background:var(--navy)"></span><h2>다음 달 계획</h2></div>
+    <div class="plan">
+      <div class="row"><div class="k">예약리뷰</div><div class="v">6/9, 6/12, 6/19, 6/26, 7/3 &nbsp;<span class="pill-ok">3건 + 서비스 2건</span></div></div>
+      <div class="row"><div class="k">블로그리뷰</div><div class="v">6/16, 6/23, 6/30, 7/7</div></div>
+      <div class="row"><div class="k">클립</div><div class="v">1건</div></div>
+      <div class="row"><div class="k">점검</div><div class="v">소식 발행 및 플레이스 점검</div></div>
+    </div>
+  </section>
+
+  <footer>YOUNG PLACE 방배점 · 월간 운영 리포트 (2026. 4. 7 ~ 6. 7)</footer>
+</div>
+</body>
+</html>
