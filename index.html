@@ -3,7 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>방배점 월간 리포트 (4.7~6.7)</title>
+<title>방배역점 월간 리포트 (9.1-9.30)</title>
+<style>는 그대로 복사해서 쓴다 (수정 금지).
+  ▸ <body> 안의 블록들은 "필요한 섹션만 골라" 복붙해서 데이터로 채운다.
+  ▸ 블록 종류: [요약카드] [기본섹션] [이미지섹션] [1등뱃지] [순위변동표] [링크목록] [다음달계획]
+  ▸ 색: navy 헤더 + orange(--brand) 강조 + green(--ok) 1등.
+-->
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{지점}} 월간 리포트 ({{기간}})</title>
 <style>
   :root{
     --ink:#1c2230; --sub:#6b7280; --line:#e7e9ee; --bg:#f5f6f9;
@@ -32,7 +42,21 @@
   .note b{color:var(--brand)}
   .pill-ok{display:inline-block;font-size:12px;font-weight:700;color:var(--ok);background:var(--ok-soft);padding:3px 10px;border-radius:999px;margin-left:4px}
 
-  ul.links{list-style:none;display:flex;flex-direction:column;gap:7px;margin-top:4px}
+  .rank-badges{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px}
+  .rank-badges .rb{display:inline-flex;align-items:center;gap:6px;font-weight:800;font-size:14px;color:var(--ok);background:var(--ok-soft);border:1px solid #bfe8d3;padding:7px 13px;border-radius:10px}
+  .rank-badges .rb .one{background:var(--ok);color:#fff;border-radius:6px;font-size:11px;padding:1px 7px}
+
+  table.rank{width:100%;border-collapse:collapse;margin-top:6px;font-size:13.5px}
+  table.rank th{background:#f4f6f9;color:#46506a;font-weight:700;text-align:left;padding:9px 12px;border-bottom:2px solid var(--line)}
+  table.rank td{padding:9px 12px;border-bottom:1px solid var(--line)}
+  table.rank td.kw{font-weight:700;color:var(--navy)}
+  table.rank .arrow{color:var(--sub)}
+  table.rank .now{font-weight:800}
+  table.rank .now.first{color:var(--ok)}
+  table.rank .now.up{color:var(--brand)}
+  table.rank tr:last-child td{border-bottom:none}
+
+  ul.links{list-style:none;display:flex;flex-direction:column;gap:7px;margin-top:8px}
   ul.links li{display:flex;align-items:center;gap:10px;background:#fafbfc;border:1px solid var(--line);border-radius:10px;padding:9px 14px;font-size:13.5px}
   ul.links li::before{content:"▸";color:var(--brand);font-weight:800}
   ul.links li a{color:#2b62d9;text-decoration:none;word-break:break-all}
@@ -40,129 +64,58 @@
 
   .imgrow{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
   .imgrow.one{grid-template-columns:1fr;max-width:460px}
+  .imgrow.three{grid-template-columns:repeat(3,1fr)}
   figure{margin:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fafbfc}
   figure img{width:100%;display:block}
   figcaption{font-size:12.5px;color:var(--sub);padding:8px 12px;border-top:1px solid var(--line);background:#fff}
-
   .plan{display:flex;flex-direction:column;gap:10px}
   .plan .row{display:flex;gap:12px;align-items:flex-start;font-size:14.5px}
-  .plan .row .k{flex:0 0 88px;font-weight:700;color:var(--navy)}
+  .plan .row .k{flex:0 0 96px;font-weight:700;color:var(--navy)}
   .plan .row .v{color:#374151}
-  .kw-result{display:inline-flex;align-items:center;gap:6px;font-weight:800;color:var(--ok);font-size:15px;margin-right:14px}
   footer{text-align:center;color:var(--sub);font-size:13px;margin-top:30px}
-  @media(max-width:640px){.summary{grid-template-columns:repeat(2,1fr)}.imgrow{grid-template-columns:1fr}}
+  @media(max-width:640px){.summary{grid-template-columns:repeat(2,1fr)}.imgrow,.imgrow.three{grid-template-columns:1fr}}
   @media print{
     body{background:#fff}
     .wrap{padding-bottom:0}
     section{break-inside:avoid;box-shadow:none}
     header{break-inside:avoid;border-radius:0}
-    figure{break-inside:avoid}
-    ul.links li{break-inside:avoid}
+    figure,ul.links li,table.rank tr{break-inside:avoid}
   }
 </style>
 </head>
 <body>
 <header>
-  <span class="badge-top">YOUNG PLACE · 방배점</span>
-  <h1>방배점 월간 운영 리포트</h1>
-  <div class="period">2026. 4. 7 ~ 6. 7 &nbsp;|&nbsp; 네이버 플레이스 · 블로그 · 광고 통합</div>
-  <div class="summary">
-    <div class="card"><div class="num">7<small>건</small></div><div class="lbl">예약리뷰</div><div class="svc">계약 6 + 서비스 1</div></div>
-    <div class="card"><div class="num">13<small>건</small></div><div class="lbl">블로그리뷰</div><div class="svc">계약 8 + 서비스 5</div></div>
-    <div class="card"><div class="num">3<small>건</small></div><div class="lbl">클립</div><div class="svc">계약 2 + 서비스 1</div></div>
-    <div class="card"><div class="num">3<small>건</small></div><div class="lbl">소식</div><div class="svc">동영상·남성전용</div></div>
-  </div>
+  <span class="badge-top">YOUNG PLACE · 방배역점</span>
+  <h1>젊은공간 방배역점 월간 운영 리포트</h1>
+  <div class="period">2026. 9. 1 ~ 9. 30 &nbsp;|&nbsp; 네이버 플레이스 · 블로그 · 클립 통합</div>
+  <div class="summary"><div class="card"><div class="num">7<small>건</small></div><div class="lbl">블로그리뷰</div><div class="svc">계약 4 + 서비스 3</div></div><div class="card"><div class="num">8<small>건</small></div><div class="lbl">예약리뷰</div><div class="svc">계약 3 + 서비스 5</div></div><div class="card"><div class="num">2<small>건</small></div><div class="lbl">클립</div><div class="svc">계약 1 + 서비스 1</div></div></div>
 </header>
-
 <div class="wrap">
-
-  <section>
-    <div class="sec-head"><span class="dot"></span><h2>예약리뷰</h2><span class="count">계약 6건 + 서비스 1건 = 총 7건 완료</span></div>
-    <p class="note">계약 분량 6건을 모두 완료하고, <b>서비스로 1건을 더 진행</b>해 총 7건을 업로드했습니다. (동영상·사진·키워드 조합)</p>
-    <div class="imgrow one">
-      <figure><img src="images/image.png" alt="예약리뷰"><figcaption>동영상·사진·리뷰 업로드</figcaption></figure>
-    </div>
-  </section>
-
-  <section>
-    <div class="sec-head"><span class="dot"></span><h2>블로그리뷰</h2><span class="count">계약 8건 + 서비스 5건 = 총 13건 완료</span></div>
-    <p class="note">키워드·방문의도에 맞춰 <b>AI가 읽을 수 있는 구조</b>로 리뷰를 설계하고, <b>실제 리뷰어 아이디</b>로 진행했습니다. 계약 8건을 완료하고 <b>서비스로 5건을 더 진행</b>해 총 13건을 업로드했으며, <b>방배역원룸텔·방배역고시원 1페이지 상위노출</b>을 견인했습니다. (방배점 전용 블로그 ysbangbae 중심 + 체험단 분산)</p>
-    <ul class="links">
-      <li><a href="https://blog.naver.com/youngplace3033/224256505831" target="_blank">blog.naver.com/youngplace3033/224256505831</a></li>
-      <li><a href="https://blog.naver.com/ysbangbae/224266567897" target="_blank">blog.naver.com/ysbangbae/224266567897</a></li>
-      <li><a href="https://blog.naver.com/ysbangbae/224272165641" target="_blank">blog.naver.com/ysbangbae/224272165641</a></li>
-      <li><a href="https://blog.naver.com/julli9900/224268963218" target="_blank">blog.naver.com/julli9900/224268963218</a></li>
-      <li><a href="https://blog.naver.com/ysbangbae/224272150576" target="_blank">blog.naver.com/ysbangbae/224272150576</a></li>
-      <li><a href="https://blog.naver.com/emma200909/224256469318" target="_blank">blog.naver.com/emma200909/224256469318</a></li>
-      <li><a href="https://blog.naver.com/ysbangbae/224296967299" target="_blank">blog.naver.com/ysbangbae/224296967299</a></li>
-      <li><a href="https://blog.naver.com/jy0303-_-/224297763230" target="_blank">blog.naver.com/jy0303-_-/224297763230</a></li>
-      <li><a href="https://blog.naver.com/ehsahr/224310461166" target="_blank">blog.naver.com/ehsahr/224310461166</a></li>
-      <li><a href="https://blog.naver.com/ta1013/224303700099" target="_blank">blog.naver.com/ta1013/224303700099</a></li>
-      <li><a href="https://blog.naver.com/smjjj-/224299811627" target="_blank">blog.naver.com/smjjj-/224299811627</a></li>
-      <li><a href="https://blog.naver.com/ysbangbae/224299632430" target="_blank">blog.naver.com/ysbangbae/224299632430</a></li>
-    </ul>
-  </section>
-
-  <section>
-    <div class="sec-head"><span class="dot"></span><h2>플레이스 — 남성전용으로 수정</h2><span class="count">5월 27일 반영</span></div>
-    <p class="note">업종 포지셔닝을 <b>'남성전용'</b>으로 명확화하여 타깃 정합도를 강화했습니다.</p>
-    <div class="imgrow one">
-      <figure><img src="images/image_3.png" alt="남성전용 반영"><figcaption>플레이스 ‘남성전용’ 반영 (5/27)</figcaption></figure>
-    </div>
-  </section>
-
-  <section>
-    <div class="sec-head"><span class="dot"></span><h2>클립</h2><span class="count">계약 2건 + 서비스 1건 = 총 3건 완료</span></div>
-    <p class="note">계약 2건을 완료하고, <b>서비스로 1건을 더 제작·업로드</b>했습니다.</p>
-    <div class="imgrow one">
-      <figure><img src="images/image_5.png" alt="클립"><figcaption>숏폼 클립 업로드</figcaption></figure>
-    </div>
-  </section>
-
-  <section>
-    <div class="sec-head"><span class="dot"></span><h2>소식</h2><span class="count">3건 발행</span></div>
-    <p class="note">동영상 제작 · 남성전용 안내 등 플레이스 소식 3건을 발행했습니다.</p>
-    <div class="imgrow one">
-      <figure><img src="images/image_6.png" alt="소식"><figcaption>플레이스 소식 발행</figcaption></figure>
-    </div>
-  </section>
-
-  <section>
-    <div class="sec-head"><span class="dot"></span><h2>블로그 · 플레이스 연결</h2><span class="count">블로그 개설 — 서비스 제공</span></div>
-    <p class="note"><b>방배점 전용 블로그를 신규 개설</b>해 플레이스와 연결했습니다. <span class="pill-ok">서비스 제공</span></p>
-    <ul class="links">
-      <li><a href="https://blog.naver.com/ysbangbae/224296967299" target="_blank">blog.naver.com/ysbangbae/224296967299</a></li>
-    </ul>
-  </section>
-
-  <section>
-    <div class="sec-head"><span class="dot"></span><h2>네이버 광고 셋팅</h2><span class="count">서비스 제공</span></div>
-    <p class="note">플레이스 광고 · 파워링크 세팅을 완료했습니다. <span class="pill-ok">서비스 제공</span></p>
-    <div class="imgrow one">
-      <figure><img src="images/image_8.png" alt="광고 셋팅"><figcaption>플레이스·파워링크 광고 셋팅</figcaption></figure>
-    </div>
-  </section>
-
-  <section>
-    <div class="sec-head"><span class="dot"></span><h2>키워드 순위 — 1페이지 노출</h2><span class="count">방배역원룸텔 · 방배역고시원</span></div>
-    <p class="note"><span class="kw-result">✔ 방배역원룸텔 1페이지</span><span class="kw-result">✔ 방배역고시원 1페이지</span></p>
-    <div class="imgrow">
-      <figure><img src="images/image_9.png" alt="방배역원룸텔 순위"><figcaption>‘방배역원룸텔’ 검색 1페이지 노출</figcaption></figure>
-      <figure><img src="images/image_10.png" alt="방배역고시원 순위"><figcaption>‘방배역고시원’ 검색 1페이지 노출</figcaption></figure>
-    </div>
-  </section>
-
-  <section>
-    <div class="sec-head"><span class="dot" style="background:var(--navy)"></span><h2>다음 달 계획</h2></div>
-    <div class="plan">
-      <div class="row"><div class="k">예약리뷰</div><div class="v">6/9, 6/12, 6/19, 6/26, 7/3 &nbsp;<span class="pill-ok">3건 + 서비스 2건</span></div></div>
-      <div class="row"><div class="k">블로그리뷰</div><div class="v">6/16, 6/23, 6/30, 7/7</div></div>
-      <div class="row"><div class="k">클립</div><div class="v">1건</div></div>
-      <div class="row"><div class="k">점검</div><div class="v">소식 발행 및 플레이스 점검</div></div>
-    </div>
-  </section>
-
-  <footer>YOUNG PLACE 방배점 · 월간 운영 리포트 (2026. 4. 7 ~ 6. 7)</footer>
+<section>
+  <div class="sec-head"><span class="dot"></span><h2>이번 달 리뷰 링크</h2><span class="count">총 17건</span></div>
+  <p class="note">이번 달 진행한 리뷰·클립입니다. 누르면 바로 확인하실 수 있습니다.</p>
+  <h3 style="font-size:15px;margin:14px 0 6px">블로그리뷰 7건</h3><ul class="links"><li><a href="https://blog.naver.com/ysbangbae/224397111608" target="_blank">블로그리뷰 1</a></li><li><a href="https://blog.naver.com/1per_rich/224397132703" target="_blank">블로그리뷰 2</a></li><li><a href="https://blog.naver.com/alwkdutkh/224399221456" target="_blank">블로그리뷰 3</a></li><li><a href="https://blog.naver.com/sm482300/224406680120" target="_blank">블로그리뷰 4</a></li><li><a href="https://blog.naver.com/goriwine-wonju/224414392000" target="_blank">블로그리뷰 5</a></li><li><a href="https://blog.naver.com/rkakcl2022/224420444270" target="_blank">블로그리뷰 6</a></li><li><a href="https://blog.naver.com/rose20117/224426553165" target="_blank">블로그리뷰 7</a></li></ul><h3 style="font-size:15px;margin:14px 0 6px">예약리뷰 8건</h3><div class="imgrow"><figure><a href="https://naver.me/GlRSXD2P" target="_blank"><img src="images/예약리뷰_1.png" alt=""></a><figcaption>예약리뷰 1 · xuv****</figcaption></figure><figure><a href="https://naver.me/IMZoIcpv" target="_blank"><img src="images/예약리뷰_2.png" alt=""></a><figcaption>예약리뷰 2 · 슈가0127</figcaption></figure><figure><a href="https://naver.me/54KvygKF" target="_blank"><img src="images/예약리뷰_3.png" alt=""></a><figcaption>예약리뷰 3 · samvip</figcaption></figure><figure><a href="https://naver.me/xm0m7wrM" target="_blank"><img src="images/예약리뷰_4.png" alt=""></a><figcaption>예약리뷰 4 · 거북이는깡총</figcaption></figure><figure><a href="https://naver.me/F05DWX2c" target="_blank"><img src="images/예약리뷰_5.png" alt=""></a><figcaption>예약리뷰 5 · gomp****</figcaption></figure><figure><a href="https://naver.me/xwoZCgzq" target="_blank"><img src="images/예약리뷰_6.png" alt=""></a><figcaption>예약리뷰 6 · wan2****</figcaption></figure><figure><a href="https://naver.me/GZDPFFHR" target="_blank"><img src="images/예약리뷰_7.png" alt=""></a><figcaption>예약리뷰 7 · 나는야순자씨</figcaption></figure><figure><a href="https://naver.me/x523fsUQ" target="_blank"><img src="images/예약리뷰_8.png" alt=""></a><figcaption>예약리뷰 8 · khjf****</figcaption></figure></div><h3 style="font-size:15px;margin:14px 0 6px">클립 2건</h3><ul class="links"><li><a href="https://m.blog.naver.com/baeny_mom/clip/16152770" target="_blank">클립 1</a></li><li><a href="https://m.blog.naver.com/minjjj0818/clip/16165448" target="_blank">클립 2</a></li></ul>
+</section><section>
+  <div class="sec-head"><span class="dot"></span><h2>키워드 순위</h2><span class="count">플레이스 순위</span></div>
+  <p class="note">현재 순위는 캡처 시점(2026-10-05 19:37) 네이버 플레이스 검색(광고 제외) 기준입니다.</p>
+  
+  <table class="rank"><thead><tr><th>키워드</th><th>지난 기간(추적)</th><th>현재(캡처 기준)</th></tr></thead><tbody><tr><td class="kw">방배역고시원</td><td>6위 <span class="arrow">→</span> 3위</td><td class="now up">4위</td></tr><tr><td class="kw">방배역원룸텔</td><td>4위 <span class="arrow">→</span> 2위</td><td class="now up">3위</td></tr></tbody></table>
+  <div class="imgrow "><figure><img src="images/방배역고시원_플레이스_4위.png" alt=""><figcaption>‘방배역고시원’ 검색 — <b>4위</b></figcaption></figure><figure><img src="images/방배역원룸텔_플레이스_3위.png" alt=""><figcaption>‘방배역원룸텔’ 검색 — <b>3위</b></figcaption></figure></div>
+</section><section>
+  <div class="sec-head"><span class="dot"></span><h2>블로그 노출</h2><span class="count">노출 16건</span></div>
+  <p class="note">네이버 블로그탭 상위 30위 안에 우리 콘텐츠 16건이 노출되고 있습니다.</p>
+  <ul class="links"><li><b>‘방배역고시원’ 3위</b> 외 12건</li><li><b>‘방배역원룸텔’ 2위</b> 외 14건</li></ul>
+  <div class="imgrow three"><figure><img src="images/방배역고시원_블로그_3위_외12건.png" alt=""><figcaption>‘방배역고시원’ 검색 — <b>3위 외 12건</b></figcaption></figure><figure><img src="images/방배역고시원_블로그_3위_외12건_2화면.png" alt=""><figcaption>‘방배역고시원’ 검색 — <b>3위 외 12건</b></figcaption></figure><figure><img src="images/방배역고시원_블로그_3위_외12건_3화면.png" alt=""><figcaption>‘방배역고시원’ 검색 — <b>3위 외 12건</b></figcaption></figure><figure><img src="images/방배역원룸텔_블로그_2위_외14건.png" alt=""><figcaption>‘방배역원룸텔’ 검색 — <b>2위 외 14건</b></figcaption></figure><figure><img src="images/방배역원룸텔_블로그_2위_외14건_2화면.png" alt=""><figcaption>‘방배역원룸텔’ 검색 — <b>2위 외 14건</b></figcaption></figure><figure><img src="images/방배역원룸텔_블로그_2위_외14건_3화면.png" alt=""><figcaption>‘방배역원룸텔’ 검색 — <b>2위 외 14건</b></figcaption></figure></div>
+</section><section>
+  <div class="sec-head"><span class="dot"></span><h2>클립 노출</h2><span class="count">노출 3건</span></div>
+  <p class="note">네이버 클립탭 상위 30위 안에 우리 콘텐츠 3건이 노출되고 있습니다.</p>
+  <ul class="links"><li><b>‘방배역고시원’ 1위</b> 외 2건</li><li><b>‘방배역원룸텔’ 1위</b> 외 2건</li></ul>
+  <div class="imgrow three"><figure><img src="images/방배역고시원_클립_1위_외2건.png" alt=""><figcaption>‘방배역고시원’ 검색 — <b>1위 외 2건</b></figcaption></figure><figure><img src="images/방배역고시원_클립_1위_외2건_2화면.png" alt=""><figcaption>‘방배역고시원’ 검색 — <b>1위 외 2건</b></figcaption></figure><figure><img src="images/방배역고시원_클립_1위_외2건_3화면.png" alt=""><figcaption>‘방배역고시원’ 검색 — <b>1위 외 2건</b></figcaption></figure><figure><img src="images/방배역원룸텔_클립_1위_외2건.png" alt=""><figcaption>‘방배역원룸텔’ 검색 — <b>1위 외 2건</b></figcaption></figure><figure><img src="images/방배역원룸텔_클립_1위_외2건_2화면.png" alt=""><figcaption>‘방배역원룸텔’ 검색 — <b>1위 외 2건</b></figcaption></figure><figure><img src="images/방배역원룸텔_클립_1위_외2건_3화면.png" alt=""><figcaption>‘방배역원룸텔’ 검색 — <b>1위 외 2건</b></figcaption></figure></div>
+</section><section>
+  <div class="sec-head"><span class="dot" style="background:var(--navy)"></span><h2>다음 달 계획</h2></div>
+  <div class="plan"><div class="row"><div class="k">계획</div><div class="v">예약리뷰 · 블로그리뷰 · 클립 · 소식 정기 진행, 키워드 순위 관리</div></div>
+</section>
+<footer>YOUNG PLACE 방배역점 · 월간 운영 리포트 (2026. 9. 1 ~ 9. 30)</footer>
 </div>
 </body>
 </html>
